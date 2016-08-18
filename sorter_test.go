@@ -2,28 +2,24 @@ package sorter_test
 
 import (
 	"sort"
-	"testing"
 
-	"reflect"
+	"fmt"
 
 	"github.com/davelondon/sorter"
 )
 
-func TestNew(t *testing.T) {
+func ExampleNew() {
 
-	s := []person{{name: "foo"}, {name: "bar"}, {name: "baz"}}
+	type person struct{ name string }
+
+	s := []person{{name: "foo"}, {name: "bar"}, {name: "baz"}, {name: "qux"}}
 	sort.Sort(sorter.New(
 		len(s),
 		func(i, j int) { s[i], s[j] = s[j], s[i] },
 		func(i, j int) bool { return s[i].name < s[j].name },
 	))
 
-	expected := []person{{"bar"}, {"baz"}, {"foo"}}
-	if !reflect.DeepEqual(s, expected) {
-		t.Fatalf("Expected: %v. Got: %v", expected, s)
-	}
-}
+	fmt.Println(s)
+	// Output: [{bar} {baz} {foo} {qux}]
 
-type person struct {
-	name string
 }
