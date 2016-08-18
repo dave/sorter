@@ -1,5 +1,5 @@
 # sorter
-Simplify sorting in Go
+Simplify sorting in Go. Thanks to [Merovius](https://github.com/merovius) for the inspiration.
 
 # Usage
 ```
