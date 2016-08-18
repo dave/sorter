@@ -6,6 +6,7 @@ Simplify sorting in Go
 type person struct{ name string }
 
 s := []person{{name: "foo"}, {name: "bar"}, {name: "baz"}, {name: "qux"}}
+
 sort.Sort(sorter.New(
     len(s),
     func(i, j int) { s[i], s[j] = s[j], s[i] },
