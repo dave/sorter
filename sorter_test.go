@@ -6,7 +6,7 @@ import (
 
 	"reflect"
 
-	"kego.io/sorter"
+	"github.com/davelondon/sorter"
 )
 
 func TestNew(t *testing.T) {
