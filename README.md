@@ -2,7 +2,7 @@
 Simplify sorting in Go. Thanks to [Merovius](https://github.com/merovius) for the inspiration.
 
 # Usage
-```
+```go
 type person struct{ name string }
 
 s := []person{{name: "foo"}, {name: "bar"}, {name: "baz"}, {name: "qux"}}
