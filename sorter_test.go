@@ -5,7 +5,7 @@ import (
 
 	"fmt"
 
-	"github.com/davelondon/sorter"
+	"github.com/dave/sorter"
 )
 
 func ExampleNew() {
